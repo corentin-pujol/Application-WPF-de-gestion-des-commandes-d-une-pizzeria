@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfAppPUJOL.InformationCuisine"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppPUJOL"
+        mc:Ignorable="d"
+        Title="InformationCuisine" Height="450" Width="800">
+    <Grid>
+        <Rectangle Fill="Gray" HorizontalAlignment="Left" Height="420" Stroke="Black" VerticalAlignment="Top" Width="794" Margin="0,0,-0.4,0"/>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="278" Margin="56,44,0,0" Stroke="Black" VerticalAlignment="Top" Width="293"/>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="278" Margin="448,44,0,0" Stroke="Black" VerticalAlignment="Top" Width="291"/>
+        <ScrollViewer x:Name="sv_CommandeAPreparer" HorizontalAlignment="Left" Margin="56,44,0,0" VerticalAlignment="Top" Width="293" Height="278" HorizontalScrollBarVisibility="Auto">
+            <TextBlock x:Name="RecapApreparerBlock" HorizontalAlignment="Left" Margin="546,211,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="217" Height="147"/>
+        </ScrollViewer>
+        <ScrollViewer x:Name="sv_CommandePrete" HorizontalAlignment="Left" Margin="448,44,0,0" VerticalAlignment="Top" Width="291" Height="278" HorizontalScrollBarVisibility="Auto">
+            <TextBlock x:Name="RecapCommandePreteBlock" HorizontalAlignment="Left" Margin="546,211,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="217" Height="147"/>
+        </ScrollViewer>
+        <StackPanel Margin="56,327,488.6,54">
+            <TextBlock x:Name="CommandesPretesBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Commandes en préparation :" VerticalAlignment="Top" Foreground="White"/>
+            <ComboBox x:Name="ComboBox_CommandePretes" Loaded="CommandePrete"/>
+        </StackPanel>
+        <Button x:Name="BtnPret" Content="Prête" HorizontalAlignment="Left" Margin="125,382,0,0" VerticalAlignment="Top" Width="116" Height="28" Click="Prete"/>
+        <StackPanel Margin="490,327,54.6,54">
+            <TextBlock x:Name="CommandesALivrerBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Commandes à livrer :" VerticalAlignment="Top" Foreground="White" Margin="-38,0,0,0"/>
+            <ComboBox x:Name="ComboBox_CommandeALivrer" Loaded="CommandeALivrer" Margin="-38,0,37.8,0"/>
+        </StackPanel>
+        <Button x:Name="BtnALivrer" Content="A Livrer" HorizontalAlignment="Left" Margin="522,382,0,0" VerticalAlignment="Top" Width="116" Height="28" Click="ALivrer"/>
+
+    </Grid>
+</Window>

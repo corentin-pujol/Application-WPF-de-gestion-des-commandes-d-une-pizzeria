@@ -1,0 +1,64 @@
+﻿<Window x:Class="WpfAppPUJOL.ModifierClient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppPUJOL"
+        mc:Ignorable="d"
+        Title="ModifierClient" Height="450" Width="800">
+    <Grid Margin="12">
+        <StackPanel Margin="39,40,569.6,40">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Clients à modifier :" VerticalAlignment="Top"/>
+            <ComboBox x:Name="ComboBox_ClientModif" Loaded="ModifClient"/>
+            <TextBlock Text="Nom :"/>
+            <TextBox x:Name="NomBox"/>
+            <TextBlock Text="Prénom :"/>
+            <TextBox x:Name="PrenomBox"/>
+            <TextBlock Text="Adresse :"/>
+            <TextBox x:Name="AdresseBox"/>
+            <TextBlock Text="Téléphone :"/>
+            <TextBox x:Name="PhoneBox"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Clients à supprimer :" VerticalAlignment="Top"/>
+            <ComboBox x:Name="ComboBox_ClientSupp" Loaded="SuppClient"/>
+
+        </StackPanel>
+        
+        <StackPanel Margin="312,40,296.6,40">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Commis à modifier :" VerticalAlignment="Top"/>
+            <ComboBox x:Name="ComboBox_CommisModif" Loaded="ModifCommis"/>
+            <TextBlock Text="Etat :"/>
+            <ComboBox x:Name="ComboBox_CommisEtat" Loaded="EtatCommis"/>
+            <TextBlock Text="Nom :"/>
+            <TextBox x:Name="NomBoxC"/>
+            <TextBlock Text="Prénom :"/>
+            <TextBox x:Name="PrenomBoxC"/>
+            <TextBlock Text="Adresse :"/>
+            <TextBox x:Name="AdresseBoxC"/>
+            <TextBlock Text="Téléphone :"/>
+            <TextBox x:Name="PhoneBoxC"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Commis à supprimer :" VerticalAlignment="Top"/>
+            <ComboBox x:Name="ComboBox_CommisSupp" Loaded="SuppCommis"/>
+
+        </StackPanel>
+        <StackPanel Margin="574,40,34.6,40">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Livreurs à modifier :" VerticalAlignment="Top"/>
+            <ComboBox x:Name="ComboBox_LivreurModif" Loaded="ModifLivreur"/>
+            <TextBlock Text="Etat :"/>
+            <ComboBox x:Name="ComboBox_LivreurEtat" Loaded="EtatLivreur"/>
+            <TextBlock Text="Nom :"/>
+            <TextBox x:Name="NomBoxL"/>
+            <TextBlock Text="Prénom :"/>
+            <TextBox x:Name="PrenomBoxL"/>
+            <TextBlock Text="Adresse :"/>
+            <TextBox x:Name="AdresseBoxL"/>
+            <TextBlock Text="Téléphone :"/>
+            <TextBox x:Name="PhoneBoxL"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Livreurs à supprimer :" VerticalAlignment="Top"/>
+            <ComboBox x:Name="ComboBox_LivreurSupp" Loaded="SuppLivreur"/>
+
+        </StackPanel>
+        <Button x:Name="BtnClient" Content="Valider" HorizontalAlignment="Left" Margin="84,270,0,0" VerticalAlignment="Top" Width="75" Click="ValiderClient"/>
+        <Button x:Name="BtnCommis" Content="Valider" HorizontalAlignment="Left" Margin="357,317,0,0" VerticalAlignment="Top" Width="75" Click="ValiderCommis"/>
+        <Button x:Name="BtnLivreur" Content="Valider" HorizontalAlignment="Left" Margin="622,317,0,0" VerticalAlignment="Top" Width="75" Click="ValiderLivreur"/>
+    </Grid>
+</Window>

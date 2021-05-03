@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfAppPUJOL.Commander"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppPUJOL"
+        mc:Ignorable="d"
+        Title="Commander" Height="450" Width="800" Closing="Window_Closing">
+    <Grid Margin="12">
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Commis disponible prenant l'appel :" VerticalAlignment="Top"/>
+            <ComboBox x:Name="ComboBox_Commis" Loaded="ComboBox_Loaded"/>
+        </StackPanel>
+        <Button x:Name="BtnValiderCommis" Content="Valider" Margin="291,62,295.6,307" Click="ValidationCommis"/>
+        <TextBlock HorizontalAlignment="Left" Text="Le client est nouveau ? : " Margin="10,133,0,242" Width="750"/>
+        <Button x:Name="NouveauClient" Content="Nouveau Client" Margin="90,159,465.6,184" Click="CreationNouveauClient" />
+        <Button x:Name="ClientExistant" Content="Client Existant" Margin="466,159,90,184" Click="RechercherClientExistant" />
+
+    </Grid>
+</Window>

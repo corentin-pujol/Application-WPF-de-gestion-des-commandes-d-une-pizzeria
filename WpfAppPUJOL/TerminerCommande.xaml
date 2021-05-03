@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfAppPUJOL.TerminerCommande"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppPUJOL"
+        mc:Ignorable="d"
+        Title="TerminerCommande" Height="450" Width="800" Closing="Window_Closing">
+    <Grid>
+        <Rectangle Fill="Gray" HorizontalAlignment="Left" Height="420" Margin="0,0,-0.4,0" Stroke="Black" VerticalAlignment="Top" Width="794"/>
+        <StackPanel Height="400" Width="774" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0">
+            <TextBlock x:Name="NumCommandeBlock" TextWrapping="Wrap" Text="Numéro de la commande : " Margin="0,0,-0.4,0" Foreground="White"/>
+            <TextBox x:Name="NumCommandeBox" Height="23" TextWrapping="Wrap" Text=""/>
+            <TextBlock x:Name="NumLivreurBlock" TextWrapping="Wrap" Text="Numéro du livreur : " Margin="0,0,-0.4,0" Foreground="White"/>
+            <TextBox x:Name="NumLivreurBox" Height="23" TextWrapping="Wrap" Text=""/>
+        </StackPanel>
+        <Button x:Name="BtnFactureRecup" Content="Facture récupérée" HorizontalAlignment="Left" Margin="54,130,0,0" VerticalAlignment="Top" Width="180" Height="48" Click="FactureRecup"/>
+        <Button x:Name="BtnFermetureCommande" Content="Fermer la commande" HorizontalAlignment="Left" Margin="570,335,0,0" VerticalAlignment="Top" Width="180" Height="48" Click="FermerLaCommande"/>
+        <Button x:Name="BtnEncaisser" Content="Argent encaissé" HorizontalAlignment="Left" Margin="54,208,0,0" VerticalAlignment="Top" Width="180" Height="48" Click="EncaisserArgent"/>
+
+
+    </Grid>
+</Window>

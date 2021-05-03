@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfAppPUJOL.ModificationCommande"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppPUJOL"
+        mc:Ignorable="d"
+        Title="ModificationCommande" Height="450" Width="800" Closing="Window_Closing">
+    <Grid Margin="12">
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Pizzas à supprimer :" VerticalAlignment="Top"/>
+            <ComboBox x:Name="ComboBox_PizzasCommande" Loaded="SuppressionPizza"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Boissons à supprimer :" VerticalAlignment="Top"/>
+            <ComboBox x:Name="ComboBox_BoissonsCommande" Loaded="SuppressionBoisson"/>
+        </StackPanel>
+        <Button x:Name="BtnSuppression" Content="Supprimer de la commande" HorizontalAlignment="Left" Margin="294,147,0,0" VerticalAlignment="Top" Width="175" Height="57" Click="SupprimerElementsComboBox"/>
+
+    </Grid>
+</Window>
